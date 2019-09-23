@@ -29,7 +29,7 @@ set ( CMAKE_C_FLAGS "-g3 -O0 -Wall -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfp
 
 #LDFLAGS
 set ( CMAKE_EXE_LINKER_FLAGS "-specs=nano.specs -Wl,--gc-sections" )
-set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T ../CMSIS_and_startup/TKM32F499_FLASH.ld" )
+set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T ${CMAKE_CURRENT_LIST_DIR}/CMSIS_and_startup/TKM32F499_FLASH.ld" )
 
 #ASMFLAGS
 set ( CMAKE_ASM_FLAGS "-x assembler-with-cpp ${CMAKE_C_FLAGS}")
